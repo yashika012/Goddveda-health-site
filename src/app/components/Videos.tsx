@@ -16,7 +16,7 @@ const Videos: React.FC = () => {
     <section className="w-full min-h-screen flex justify-center items-center gap-5 flex-wrap">
       <div className="w-[90%] sm:w-[400px] h-[600px] rounded-md overflow-hidden">
         <video
-          src="/assets/videos/vid4.mp4"
+          src="./assets/videos/vid4.mp4"
           className="w-full h-full object-cover"
           onClick={handleVideoClick}
         ></video>
@@ -24,7 +24,7 @@ const Videos: React.FC = () => {
 
       <div className="w-[90%] sm:w-[400px] h-[600px] rounded-md overflow-hidden">
         <video
-          src="/assets/videos/vid1.mp4"
+          src="./assets/videos/vid1.mp4"
           className="w-full h-full object-cover"
           onClick={handleVideoClick}
         ></video>
@@ -32,7 +32,7 @@ const Videos: React.FC = () => {
 
       <div className="w-[90%] sm:w-[400px] h-[600px] rounded-md overflow-hidden">
         <video
-          src="/assets/videos/vid2.mp4"
+          src="./assets/videos/vid2.mp4"
           className="w-full h-full object-cover"
           onClick={handleVideoClick}
         ></video>
@@ -40,7 +40,7 @@ const Videos: React.FC = () => {
 
       <div className="w-[90%] sm:w-[400px] h-[600px] rounded-md overflow-hidden">
         <video
-          src="/assets/videos/vid3.mp4"
+          src="./assets/videos/vid3.mp4"
           className="w-full h-full object-cover"
           onClick={handleVideoClick}
         ></video>

@@ -17,7 +17,7 @@ const ingredientsData: IngredientCardProps[] = [
   {
     title: "Black Pepper Fruit Extract",
     description: "Enhances nutrient absorption and digestion, supporting weight management and metabolic function.",
-    imageUrl: "/assets/images/img16.jpg",
+    imageUrl: "./assets/images/img16.jpg",
     nutritionalFacts: "Vitamin C, Calcium, Iron, Magnesium",
     chemistryName: "Piperine",
     origin: "India",
@@ -25,7 +25,7 @@ const ingredientsData: IngredientCardProps[] = [
   {
     title: "Cayenne Pepper Fruit Extract",
     description: "Aids digestion and metabolism, promoting weight management by increasing calorie burning.",
-    imageUrl: "/assets/images/img15.jpg",
+    imageUrl: "./assets/images/img15.jpg",
     nutritionalFacts: "Vitamin A, Vitamin C, Potassium",
     chemistryName: "Capsaicin",
     origin: "Mexico",
@@ -33,7 +33,7 @@ const ingredientsData: IngredientCardProps[] = [
   {
     title: "Ginger Root Extract",
     description: "Elevates energy levels and focus, facilitating fat burning and alertness.",
-    imageUrl: "/assets/images/img12.jpg",
+    imageUrl: "./assets/images/img12.jpg",
     nutritionalFacts: "Vitamin B6, Magnesium, Potassium",
     chemistryName: "Gingerol",
     origin: "South Asia",
@@ -41,7 +41,7 @@ const ingredientsData: IngredientCardProps[] = [
   {
     title: "Green Tea Leaf Extract",
     description: "Boosts metabolism and offers a rich source of antioxidants, supporting fat oxidation.",
-    imageUrl: "/assets/images/img14.jpg",
+    imageUrl: "./assets/images/img14.jpg",
     nutritionalFacts: "Vitamin C, Manganese, Potassium",
     chemistryName: "Catechins",
     origin: "China",
@@ -49,7 +49,7 @@ const ingredientsData: IngredientCardProps[] = [
   {
     title: "Acetyl-L-Carnitine HCL",
     description: "Enhances mental clarity and concentration, aiding in fatty acid transportation for energy.",
-    imageUrl: "/assets/images/img13.jpg",
+    imageUrl: "./assets/images/img13.jpg",
     nutritionalFacts: "No significant nutritional content",
     chemistryName: "Acetyl-L-Carnitine",
     origin: "Synthetic",
@@ -57,7 +57,7 @@ const ingredientsData: IngredientCardProps[] = [
   {
     title: "Guggul",
     description: "Supports healthy cholesterol levels and stimulates thyroid function to boost metabolism.",
-    imageUrl: "/assets/images/img11.jpg",
+    imageUrl: "./assets/images/img11.jpg",
     nutritionalFacts: "Vitamin C, Calcium, Phytosterols",
     chemistryName: "Guggulsterone",
     origin: "India",
@@ -65,7 +65,7 @@ const ingredientsData: IngredientCardProps[] = [
   {
     title: "Garcinia Cambogia",
     description: "Aids in weight management by inhibiting fat storage and suppressing appetite.",
-    imageUrl: "/assets/images/img12.jpg",
+    imageUrl: "./assets/images/img12.jpg",
     nutritionalFacts: "Hydroxycitric Acid (HCA), Vitamin C",
     chemistryName: "Hydroxycitric Acid",
     origin: "Southeast Asia",
@@ -73,7 +73,7 @@ const ingredientsData: IngredientCardProps[] = [
   {
     title: "Capsimax",
     description: "Supports metabolism and thermogenesis, promoting weight management by increasing calorie burning and fat oxidation",
-    imageUrl: "/assets/images/img12.jpg",
+    imageUrl: "./assets/images/img12.jpg",
     nutritionalFacts: "Capsaicin, Vitamin C",
     chemistryName: "Capsaicin",
     origin: "Capsicum peppers",

@@ -20,33 +20,33 @@ const MySlider: React.FC = () => {
         <div className='w-full flex items-center justify-center overflow-hidden'>
           {/* First slide with 3 images stacked horizontally */}
           <div className='flex flex-row space-x-4'>
-            <Image src="/assets/images/img7.jpg" alt='image' width={600} height={200} />
-            <Image src="/assets/images/img1.jpg" alt='image' width={600} height={200} />
-            <Image src="/assets/images/img3.jpg" alt='image' width={600} height={200} />
+            <Image src="./assets/images/img7.jpg" alt='image' width={600} height={200} />
+            <Image src="./assets/images/img1.jpg" alt='image' width={600} height={200} />
+            <Image src="./assets/images/img3.jpg" alt='image' width={600} height={200} />
           </div>
         </div>
         <div className='w-full flex items-center justify-center overflow-hidden'>
           {/* Second slide */}
           <div className='flex flex-row space-x-4'>
-            <Image src="/assets/images/img1.jpg" alt='image' width={600} height={200} />
-            <Image src="/assets/images/img3.jpg" alt='image' width={600} height={200} />
-            <Image src="/assets/images/img8.jpg" alt='image' width={600} height={200} />
+            <Image src="./assets/images/img1.jpg" alt='image' width={600} height={200} />
+            <Image src="./assets/images/img3.jpg" alt='image' width={600} height={200} />
+            <Image src="./assets/images/img8.jpg" alt='image' width={600} height={200} />
           </div>
         </div>
         <div className='w-full flex items-center justify-center overflow-hidden'>
           {/* Third slide */}
           <div className='flex flex-row space-x-4'>
-            <Image src="/assets/images/img3.jpg" alt='image' width={600} height={200} />
-            <Image src="/assets/images/img8.jpg" alt='image' width={600} height={200} />
-            <Image src="/assets/images/img7.jpg" alt='image' width={600} height={200} />
+            <Image src="./assets/images/img3.jpg" alt='image' width={600} height={200} />
+            <Image src="./assets/images/img8.jpg" alt='image' width={600} height={200} />
+            <Image src="./assets/images/img7.jpg" alt='image' width={600} height={200} />
           </div>
         </div>
         <div className='w-full flex items-center justify-center overflow-hidden'>
           {/* Fourth slide */}
           <div className='flex flex-row space-x-4'>
-            <Image src="/assets/images/img8.jpg" alt='image' width={600} height={200} />
-            <Image src="/assets/images/img1.jpg" alt='image' width={600} height={200} />
-            <Image src="/assets/images/img3.jpg" alt='image' width={600} height={200} />
+            <Image src="./assets/images/img8.jpg" alt='image' width={600} height={200} />
+            <Image src="./assets/images/img1.jpg" alt='image' width={600} height={200} />
+            <Image src="./assets/images/img3.jpg" alt='image' width={600} height={200} />
           </div>
         </div>
       </Slider>

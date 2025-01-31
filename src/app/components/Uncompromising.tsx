@@ -49,35 +49,35 @@ const Uncompromising = () => {
       {/* Navbar Section - placed after the content */}
 <nav className='bg-white py-4 flex justify-between gap-4'>
   <Image
-    src="/assets/images/img19.jpg"
+    src="./assets/images/img19.jpg"
     alt="AM/PM Slimming Complex"
     width={180}
     height={100}
     className="rounded-lg"
   />
   <Image
-    src="/assets/images/img21.jpg"
+    src="./assets/images/img21.jpg"
     alt="AM/PM Slimming Complex"
     width={180}
     height={100}
     className="rounded-lg"
   />
   <Image
-    src="/assets/images/img17.jpg"
+    src="./assets/images/img17.jpg"
     alt="AM/PM Slimming Complex"
     width={180}
     height={100}
     className="rounded-lg"
   />
   <Image
-    src="/assets/images/image34.avif"
+    src="./assets/images/image34.avif"
     alt="AM/PM Slimming Complex"
     width={180}
     height={100}
     className="rounded-lg"
   />
   <Image
-    src="/assets/images/image35.avif"
+    src="./assets/images/image35.avif"
     alt="AM/PM Slimming Complex"
     width={180}
     height={100}

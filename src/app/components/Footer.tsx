@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
         <div className="flex flex-col w-full max-w-xs gap-5">
           <Image
-            src="/assets/images/footer-logo.avif"
+            src="./assets/images/footer-logo.avif"
             alt="logo"
             width={300}
             height={400}

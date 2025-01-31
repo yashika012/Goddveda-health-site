@@ -21,7 +21,7 @@ const Consultation = () => {
         {/* Right Side Image */}
         <div className="w-1/2 flex justify-end">
           <Image
-            src="/assets/images/image91.png"
+            src="./assets/images/image91.png"
             alt="AM/PM Slimming Complex"
             width={500}
             height={300}
