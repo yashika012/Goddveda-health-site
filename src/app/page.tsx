@@ -10,6 +10,7 @@ import KeyIngredients from './components/KeyIngredients'
 import Faq from './components/Faq'
 import Review from './components/Review'
 import Footer from './components/Footer'
+import Weight from './components/Weight'
 
 const page = () => {
   return (
@@ -22,6 +23,7 @@ const page = () => {
     <Results/>
     <DoctorAdvice/>
     <KeyIngredients/>
+    <Weight/>
     <Faq/>
     <Review/>
     <Footer/>
