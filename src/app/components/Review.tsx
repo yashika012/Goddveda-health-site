@@ -1,5 +1,5 @@
-'use client'
-import { useState } from 'react';
+"use client";
+import { useState } from "react";
 import Image from "next/image";
 
 // Mock data for reviews (you can replace it with actual data)
@@ -72,7 +72,6 @@ const reviews = [
     video: "",
     date: "2023-12-10",
   },
-  
 
   // Hindi reviews
   {
@@ -113,12 +112,11 @@ const reviews = [
     video: "",
     date: "2023-12-16",
   },
-
 ];
 
 const CustomerReviewPage = () => {
-  const [sortOption, setSortOption] = useState('recent'); // Sort by most recent by default
-  const [languageFilter, setLanguageFilter] = useState('all'); // Show all languages by default
+  const [sortOption, setSortOption] = useState("recent"); // Sort by most recent by default
+  const [languageFilter, setLanguageFilter] = useState("all"); // Show all languages by default
 
   // Set a fixed average rating of 4.5
   const averageRating = 4.5;
@@ -126,14 +124,14 @@ const CustomerReviewPage = () => {
   // Sort reviews based on the selected option
   const sortedReviews = [...reviews].sort((a, b) => {
     switch (sortOption) {
-      case 'highest':
+      case "highest":
         return b.rating - a.rating; // Sort by highest rating
-      case 'lowest':
+      case "lowest":
         return a.rating - b.rating; // Sort by lowest rating
-      case 'recent':
-        return new Date(b.date) - new Date(a.date); // Sort by most recent
-      case 'oldest':
-        return new Date(a.date) - new Date(b.date); // Sort by oldest
+      case "recent":
+        return new Date(b.date).getTime() - new Date(a.date).getTime(); // Sort by most recent
+      case "oldest":
+        return new Date(a.date).getTime() - new Date(b.date).getTime(); // Sort by oldest
       default:
         return 0;
     }
@@ -141,7 +139,7 @@ const CustomerReviewPage = () => {
 
   // Filter reviews based on language
   const filteredReviews = sortedReviews.filter((review) => {
-    if (languageFilter === 'all') return true;
+    if (languageFilter === "all") return true;
     return review.language === languageFilter;
   });
 
@@ -152,7 +150,9 @@ const CustomerReviewPage = () => {
       stars.push(
         <span
           key={i}
-          className={`text-xl ${i <= rating ? 'text-yellow-500' : 'text-gray-300'}`}
+          className={`text-xl ${
+            i <= rating ? "text-yellow-500" : "text-gray-300"
+          }`}
         >
           ★
         </span>
@@ -161,17 +161,31 @@ const CustomerReviewPage = () => {
     return stars;
   };
 
+  // Helper function to format date consistently
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
+    const day = date.getDate().toString().padStart(2, "0");
+    const month = (date.getMonth() + 1).toString().padStart(2, "0");
+    const year = date.getFullYear();
+    return `${day}/${month}/${year}`; // Format as DD/MM/YYYY
+  };
+
   return (
     <div className="container mx-auto p-6">
-      <h2 className="text-5xl font-bold text-center mb-8 bg-gray-200">Customer <span className="italic">Reviews</span></h2>
+      <h2 className="text-5xl font-bold text-center mb-8 bg-gray-200">
+        Customer <span className="italic">Reviews</span>
+      </h2>
 
       {/* Average Rating Section */}
       <div className="text-center mb-6">
         <div className="text-2xl font-semibold">Overall Rating</div>
         <div className="flex justify-center mb-4">
-          {renderStars(Math.round(averageRating))} {/* Show rounded average rating */}
+          {renderStars(Math.round(averageRating))}{" "}
+          {/* Show rounded average rating */}
         </div>
-        <div className="text-xl font-bold">Average Rating: {averageRating} / 5</div>
+        <div className="text-xl font-bold">
+          Average Rating: {averageRating} / 5
+        </div>
       </div>
 
       {/* Sorting and Language Filters */}
@@ -210,7 +224,16 @@ const CustomerReviewPage = () => {
               {renderStars(review.rating)} {/* Show review rating */}
             </div>
             <div className="text-lg italic">
-              Review in {review.language === "en" ? "English" : review.language === "es" ? "Spanish" : review.language === "fr" ? "French" : review.language === "hi" ? "Hindi" : "Marathi"}
+              Review in{" "}
+              {review.language === "en"
+                ? "English"
+                : review.language === "es"
+                ? "Spanish"
+                : review.language === "fr"
+                ? "French"
+                : review.language === "hi"
+                ? "Hindi"
+                : "Marathi"}
             </div>
 
             {/* Review Text */}
@@ -219,13 +242,18 @@ const CustomerReviewPage = () => {
             {/* Contact Icon (Phone) */}
             <div className="flex items-center mt-4">
               <span className="text-2xl mr-2">📞</span>
-              <a href="https://goodveda.com/pages/contact" className="text-blue-500 text-lg">
+              <a
+                href="https://goodveda.com/pages/contact"
+                className="text-blue-500 text-lg"
+              >
                 Contact Us
               </a>
             </div>
 
             {/* Review Date */}
-            <div className="text-sm text-gray-500 mt-2">Posted on: {new Date(review.date).toLocaleDateString()}</div>
+            <div className="text-sm text-gray-500 mt-2">
+              Posted on: {formatDate(review.date)}
+            </div>
           </div>
         ))}
       </div>
