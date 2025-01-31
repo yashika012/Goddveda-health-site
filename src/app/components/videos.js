@@ -1,7 +1,0 @@
-import vid1 from '../../../public/assets/videos/vid1.mp4'
-import vid2 from '../../../public/assets/videos/vid2.mp4'
-import vid3 from '../../../public/assets/videos/vid3.mp4'
-import vid4 from '../../../public/assets/videos/vid4.mp4'
-import vid5 from '../../../public/assets/videos/vid5.mp4'
-import vid6 from '../../../public/assets/videos/vid6.mp4'
-import vid7 from '../../../public/assets/videos/vid7.mp4'

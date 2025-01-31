@@ -1,14 +1,11 @@
 "use client";
-import { useState } from "react";
 import Image from "next/image";
 import { FaStar } from "react-icons/fa6";
 import { CiStar } from "react-icons/ci";
 
 const ProductPage = () => {
-  const [quantity, setQuantity] = useState(1);
-
   return (
-    <div className="min-h-screen flex items-center justify-center mt-10  sm:px-8">
+    <div className="min-h-screen flex items-center justify-center mt-10 sm:px-8">
       {/* Product Image and Details */}
       <div className="flex flex-col md:flex-row justify-between items-center gap-10 bg-white rounded-lg shadow-lg w-full max-w-screen-lg">
         {/* Image Section */}

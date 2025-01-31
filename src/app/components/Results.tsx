@@ -22,7 +22,7 @@ const Results = () => {
         {/* Heading next to the images */}
         <div className="flex flex-col text-gray-600 text-center md:text-left">
           <h1 className="font-bold text-3xl md:text-5xl mr-10 leading-relaxed">
-            Why Goodveda's
+            Why Goodveda&apos;s
           </h1>
           <h1 className="font-bold text-3xl md:text-5xl leading-relaxed">
             AM/PM Complex Stands out?
