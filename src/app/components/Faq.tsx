@@ -1,9 +1,9 @@
 import { useState } from "react";
 
 const FAQ = () => {
-  const [activeCategory, setActiveCategory] = useState<
-    "product" | "shipping" | "other"
-  >("product"); // Track the active category
+
+  const [activeCategory, setActiveCategory] = useState<"product" | "shipping" | "other">("product"); // Track the active category
+
   const [activeIndex, setActiveIndex] = useState<number | null>(null); // Explicitly type activeIndex
 
   const toggleAccordion = (index: number | null) => {
@@ -33,9 +33,10 @@ const FAQ = () => {
           "It is ideal for individuals looking to manage weight effectively, improve energy levels, and maintain healthy sleep patterns. However, if you are pregnant, nursing, or under medication, consult a doctor before use.",
       },
       {
-        question: "How do I take Goodveda AM/PM Slimming Complex?",
-        answer:
-          "Take one AM capsule in the morning with water to kickstart your day, and one PM capsule at night to support overnight fat burning and better sleep. Follow the dosage consistently for best results.",
+
+        question: 'How do I take Goodveda AM/PM Slimming Complex?',
+        answer: 'Take one AM capsule in the morning with water to kickstart your day, and one PM capsule at night to support overnight fat burning and better sleep. Follow the dosage consistently for best results.'
+
       },
     ],
     shipping: [
