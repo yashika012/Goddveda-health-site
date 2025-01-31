@@ -1,6 +1,5 @@
 "use client";
-import { useState } from "react";
-import Image from "next/image";
+import React from "react";
 
 // Mock data for reviews (you can replace it with actual data)
 const reviews = [
@@ -115,8 +114,8 @@ const reviews = [
 ];
 
 const CustomerReviewPage = () => {
-  const [sortOption, setSortOption] = useState("recent"); // Sort by most recent by default
-  const [languageFilter, setLanguageFilter] = useState("all"); // Show all languages by default
+  const [sortOption, setSortOption] = React.useState("recent"); // Sort by most recent by default
+  const [languageFilter, setLanguageFilter] = React.useState("all"); // Show all languages by default
 
   // Set a fixed average rating of 4.5
   const averageRating = 4.5;

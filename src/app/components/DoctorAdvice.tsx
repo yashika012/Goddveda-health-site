@@ -10,9 +10,9 @@ type VideoItem = {
 };
 
 const videos: VideoItem[] = [
-  { thumbnail: "./assets/images/img28.jpg", videoSrc: "./assets/videos/vid4.mp4" },
-  { thumbnail: "./assets/images/img29.jpg", videoSrc: "./assets/videos/vid1.mp4" },
-  { thumbnail: "./assets/images/img30.jpg", videoSrc: "./assets/videos/vid2.mp4" },
+  { thumbnail: "./assets/images/img28.jpg", videoSrc: "/assets/videos/vid4.mp4" },
+  { thumbnail: "./assets/images/img29.jpg", videoSrc: "/assets/videos/vid1.mp4" },
+  { thumbnail: "./assets/images/img30.jpg", videoSrc: "/assets/videos/vid2.mp4" },
 ];
 
 const DoctorAdvice: React.FC = () => {
@@ -30,7 +30,7 @@ const DoctorAdvice: React.FC = () => {
 
   return (
     <section className="w-full min-h-screen justify-center items-center flex flex-col font-sans gap-9">
-      <h1 className="text-5xl font-bold">Doctor's Advice</h1>
+      <h1 className="text-5xl font-bold">Doctor&apos;s Advice</h1>
       <div className="flex justify-center items-center gap-5 flex-wrap">
         {videos.map((videoItem, index) => (
           <div
