@@ -1,4 +1,7 @@
+'use client'
 import React from 'react'
+import Uncompromising  from '../app/components/Uncompromising'
+import Consultation from  '../app/components/Consultation '
 import Navbar from './components/Navbar'
 import Header from './components/Header'
 import Benefits from './components/Benefits'
@@ -15,6 +18,7 @@ import Weight from './components/Weight'
 const page = () => {
   return (
     <>
+
     <Navbar />
     <Header/>
     <Benefits/>
@@ -27,6 +31,7 @@ const page = () => {
     <Faq/>
     <Review/>
     <Footer/>
+
     </>
   )
 }
