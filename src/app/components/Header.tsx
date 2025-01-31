@@ -17,7 +17,7 @@ const ProductPage = () => {
           <div className="relative">
             {/* Main Product Image */}
             <Image
-              src="/assets/images/ketogen.webp"
+              src="./assets/images/ketogen.webp"
               alt="AM/PM Slimming Complex"
               width={450}
               height={200}
@@ -26,7 +26,7 @@ const ProductPage = () => {
             {/* Additional Image (img4) below the main image */}
             <div className="mt-4">
               <Image
-                src="/assets/images/img4.jpg"
+                src="./assets/images/img4.jpg"
                 alt="Enhances Your Metabolism"
                 width={400}
                 height={400}
@@ -63,7 +63,7 @@ const ProductPage = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             <div className="flex flex-col items-center">
               <Image
-                src="/assets/images/img28.webp"
+                src="./assets/images/img28.webp"
                 alt="Suppresses Appetite"
                 width={50}
                 height={50}
@@ -73,7 +73,7 @@ const ProductPage = () => {
             </div>
             <div className="flex flex-col items-center">
               <Image
-                src="/assets/images/img29.webp"
+                src="./assets/images/img29.webp"
                 alt="Enhances Your Metabolism"
                 width={50}
                 height={50}
@@ -83,7 +83,7 @@ const ProductPage = () => {
             </div>
             <div className="flex flex-col items-center">
               <Image
-                src="/assets/images/img30.webp"
+                src="./assets/images/img30.webp"
                 alt="Increase Energy Levels"
                 width={50}
                 height={50}
@@ -93,7 +93,7 @@ const ProductPage = () => {
             </div>
             <div className="flex flex-col items-center">
               <Image
-                src="/assets/images/img31.webp"
+                src="./assets/images/img31.webp"
                 alt="Supports Fat Burning"
                 width={50}
                 height={50}
@@ -103,7 +103,7 @@ const ProductPage = () => {
             </div>
             <div className="flex flex-col items-center">
               <Image
-                src="/assets/images/img32.webp"
+                src="./assets/images/img32.webp"
                 alt="Improves Sleep Quality"
                 width={50}
                 height={50}
@@ -113,7 +113,7 @@ const ProductPage = () => {
             </div>
             <div className="flex flex-col items-center">
               <Image
-                src="/assets/images/img33.webp"
+                src="./assets/images/img33.webp"
                 alt="Reduces Late-Night Cravings"
                 width={50}
                 height={50}
