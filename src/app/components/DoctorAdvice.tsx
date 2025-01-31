@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { useState } from "react";
@@ -10,9 +9,18 @@ type VideoItem = {
 };
 
 const videos: VideoItem[] = [
-  { thumbnail: "./assets/images/img28.jpg", videoSrc: "./assets/videos/vid4.mp4" },
-  { thumbnail: "./assets/images/img29.jpg", videoSrc: "./assets/videos/vid1.mp4" },
-  { thumbnail: "./assets/images/img30.jpg", videoSrc: "./assets/videos/vid2.mp4" },
+  {
+    thumbnail: "/assets/images/img28.jpg",
+    videoSrc: "/assets/videos/vid4.mp4",
+  },
+  {
+    thumbnail: "/assets/images/img29.jpg",
+    videoSrc: "/assets/videos/vid1.mp4",
+  },
+  {
+    thumbnail: "/assets/images/img30.jpg",
+    videoSrc: "/assets/videos/vid2.mp4",
+  },
 ];
 
 const DoctorAdvice: React.FC = () => {
@@ -21,11 +29,15 @@ const DoctorAdvice: React.FC = () => {
   );
 
   const handleThumbnailClick = (index: number) => {
-    setPlayingVideos((prev) => prev.map((playing, i) => (i === index ? true : playing)));
+    setPlayingVideos((prev) =>
+      prev.map((playing, i) => (i === index ? true : playing))
+    );
   };
 
   const handleVideoClick = (index: number) => {
-    setPlayingVideos((prev) => prev.map((playing, i) => (i === index ? false : playing)));
+    setPlayingVideos((prev) =>
+      prev.map((playing, i) => (i === index ? false : playing))
+    );
   };
 
   return (

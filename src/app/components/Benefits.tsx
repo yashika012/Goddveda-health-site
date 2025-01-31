@@ -11,7 +11,7 @@ const Benefits = () => {
         {/* Image Container */}
         <div className="w-full max-w-lg mb-10 lg:mb-0 lg:w-1/2">
           <Image
-            src="./assets/images/img9.jpg"
+            src="/assets/images/img9.jpg"
             alt="bottle"
             width={500}
             height={500}
@@ -23,37 +23,37 @@ const Benefits = () => {
         <div className="flex flex-col gap-7 w-full max-w-2xl lg:w-1/2">
           {[
             {
-              img: "./assets/images/img22.jpg",
+              img: "/assets/images/img22.jpg",
               title: "Suppresses Appetite",
               description:
                 "Keeps hunger in check, helping you avoid overeating and unhealthy snacking.",
             },
             {
-              img: "./assets/images/img23.jpg",
+              img: "/assets/images/img23.jpg",
               title: "Enhances Your Metabolism",
               description:
                 "Enhances your body's ability to burn calories, leading to effective fat loss.",
             },
             {
-              img: "./assets/images/img24.jpg",
+              img: "/assets/images/img24.jpg",
               title: "Enhances Energy Levels",
               description:
                 "Provides sustained energy throughout the day without jitters or crashes.",
             },
             {
-              img: "./assets/images/img25.jpg",
+              img: "/assets/images/img25.jpg",
               title: "Supports Fat Burning",
               description:
                 "Activates thermogenesis, enabling your body to burn stubborn fat faster.",
             },
             {
-              img: "./assets/images/img26.jpg",
+              img: "/assets/images/img26.jpg",
               title: "Improves Sleep Quality",
               description:
                 "Promotes deep and restful sleep to aid recovery and hormonal balance.",
             },
             {
-              img: "./assets/images/img27.jpg",
+              img: "/assets/images/img27.jpg",
               title: "Reduces Late-Night Cravings",
               description:
                 "Controls nighttime hunger, ensuring fewer calorie intakes before bed.",

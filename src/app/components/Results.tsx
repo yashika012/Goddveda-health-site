@@ -8,7 +8,7 @@ const Results = () => {
       {/* First Image */}
       <div className="min-h-screen relative">
         <Image
-          src="./assets/images/img10.jpg"
+          src="/assets/images/img10.jpg"
           alt="AM/PM Slimming Complex"
           layout="fill"
           objectFit="cover"
@@ -35,7 +35,7 @@ const Results = () => {
         {/* Images section */}
         <div className="flex flex-col space-y-4 md:flex-row md:space-x-4 md:space-y-0">
           <Image
-            src="./assets/images/img19.webp"
+            src="/assets/images/img19.webp"
             alt="AM/PM Slimming Complex"
             width={300}
             height={100}
@@ -45,7 +45,7 @@ const Results = () => {
             priority
           />
           <Image
-            src="./assets/images/img18.jpg"
+            src="/assets/images/img18.jpg"
             alt="AM/PM Slimming Complex"
             width={700}
             height={300}

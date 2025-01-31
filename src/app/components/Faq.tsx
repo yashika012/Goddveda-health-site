@@ -1,15 +1,19 @@
 import { JSXElementConstructor, Key, ReactElement, ReactNode, ReactPortal, SetStateAction, useState } from 'react';
 
 const FAQ = () => {
-  const [activeCategory, setActiveCategory] = useState('product'); // Track the active category
-  const [activeIndex, setActiveIndex] = useState(null); // Track the active question index within a category
+  const [activeCategory, setActiveCategory] = useState<"product" | "shipping" | "other">("product"); // Track the active category
+  const [activeIndex, setActiveIndex] = useState<number | null>(null); // Explicitly type activeIndex
 
-  const toggleAccordion = (index: Key | SetStateAction<null> | undefined) => {
+  const toggleAccordion = (index: number | null) => {
     // Toggle between showing and hiding the answer
     setActiveIndex(activeIndex === index ? null : index);
   };
 
-  const faqData = {
+  const faqData: {
+    product: { question: string; answer: string }[];
+    shipping: { question: string; answer: string }[];
+    other: { question: string; answer: string }[];
+  } = {
     product: [
       {
         question: 'What is Goodveda AM/PM Slimming Complex?',
@@ -28,8 +32,6 @@ const FAQ = () => {
       },
       {
         question: 'How do I take Goodveda AM/PM Slimming Complex?',
-
-
         answer: 'Take one AM capsule in the morning with water to kickstart your day, and one PM capsule at night to support overnight fat burning and better sleep. Follow the dosage consistently for best results.'
       },
     ],
@@ -67,89 +69,105 @@ const FAQ = () => {
       },
       {
         question: 'Can I return or exchange a product if I am not satisfied?',
-
-
         answer: 'Yes, we offer a 30-day return and exchange policy, but only for applicable reasons. For more information, please visit our refund and cancellation section...',
       },
       {
-        question:'Do you offer any personalized health consultations?',
-
-
-answer:'Yes, all of the products come with 1 month of free health consultations. You can renew the consultation if needed...',
+        question: 'Do you offer any personalized health consultations?',
+        answer: 'Yes, all of the products come with 1 month of free health consultations. You can renew the consultation if needed...',
       },
     ],
   };
 
   return (
     <div className="container mx-auto p-6">
-    <h2 className="text-5xl font-bold text-center mb-8 mt-5 bg-gray-100">
-  Frequently Asked <span className="italic">Questions</span>
-</h2>
+      <h2 className="text-5xl font-bold text-center mb-8 mt-5 bg-gray-100">
+        Frequently Asked <span className="italic">Questions</span>
+      </h2>
 
       {/* Category Buttons */}
       <div className="flex justify-center space-x-4 mb-6">
         <button
-          className={`px-8 py-2 text-xl font-semibold rounded-2xl focus:outline-none ${activeCategory === 'product' ? 'bg-gray-900 text-white' : 'bg-gray-300 text-gray-900'
-            }`}
-          onClick={() => setActiveCategory('product')}
+          className={`px-8 py-2 text-xl font-semibold rounded-2xl focus:outline-none ${
+            activeCategory === "product"
+              ? "bg-gray-900 text-white"
+              : "bg-gray-300 text-gray-900"
+          }`}
+          onClick={() => setActiveCategory("product")}
         >
           Product
         </button>
         <button
-          className={`px-8 py-2 text-xl font-semibold rounded-2xl focus:outline-none ${activeCategory === 'shipping' ? 'bg-gray-900 text-white' : 'bg-gray-300 text-gray-900'
-            }`}
-          onClick={() => setActiveCategory('shipping')}
+          className={`px-8 py-2 text-xl font-semibold rounded-2xl focus:outline-none ${
+            activeCategory === "shipping"
+              ? "bg-gray-900 text-white"
+              : "bg-gray-300 text-gray-900"
+          }`}
+          onClick={() => setActiveCategory("shipping")}
         >
           Shipping
         </button>
         <button
-          className={`px-8 py-2 text-xl font-semibold rounded-2xl focus:outline-none ${activeCategory === 'other' ? 'bg-gray-900 text-white' : 'bg-gray-3 text-gray-900'
-            }`}
-          onClick={() => setActiveCategory('other')}
+          className={`px-8 py-2 text-xl font-semibold rounded-2xl focus:outline-none ${
+            activeCategory === "other"
+              ? "bg-gray-900 text-white"
+              : "bg-gray-300 text-gray-900"
+          }`}
+          onClick={() => setActiveCategory("other")}
         >
           Other
         </button>
-
       </div>
 
       {/* FAQ Questions Based on Active Category */}
       <div className="bg-white p-4 rounded-lg shadow-lg">
-        {faqData[activeCategory].map((item: { question: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined; answer: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined; }, index: Key | null | undefined) => (
-          <div key={index} className="border-b border-gray-800">
-            <button
-              className="w-full text-left py-4 px-6 text-xl font-medium focus:outline-none rounded-lg flex justify-between items-center"
-              onClick={() => toggleAccordion(index)}
-            >
-              <span>{item.question}</span>
-              <span
-                className={`transform transition-transform duration-300 ${
-                  activeIndex === index ? 'rotate-180' : ''
+        {faqData[activeCategory].map(
+          (
+            item: {
+              question: string;
+              answer: string;
+            },
+            index: number
+          ) => (
+            <div key={index} className="border-b border-gray-800">
+              <button
+                className="w-full text-left py-4 px-6 text-xl font-medium focus:outline-none rounded-lg flex justify-between items-center"
+                onClick={() => toggleAccordion(index)}
+              >
+                <span>{item.question}</span>
+                <span
+                  className={`transform transition-transform duration-300 ${
+                    activeIndex === index ? "rotate-180" : ""
+                  }`}
+                >
+                  ↓
+                </span>
+              </button>
+              <div
+                className={`transition-all duration-500 ease-in-out overflow-hidden px-6 ${
+                  activeIndex === index ? "h-auto" : "h-0"
                 }`}
               >
-                ↓
-              </span>
-            </button>
-            <div
-              className={`transition-all duration-500 ease-in-out overflow-hidden px-6 ${activeIndex === index ? 'h-auto' : 'h-0'
-                }`}
-            >
-              <p className="py-2">{item.answer}</p>
+                <p className="py-2">{item.answer}</p>
+              </div>
             </div>
-          </div>
-        ))}
-       
+          )
+        )}
       </div>
       <div className="flex flex-col items-center justify-center text-center mt-4">
-  <button className="w-40 py-3 px-6 bg-black text-white rounded-3xl hover:bg-gray-800 transition-all font-bold">
-    Shop Now
-  </button>
-  <p className="text-gray-600 mt-2 text-xl">
-  Got a Question? <a href="https://goodveda.com/pages/contact" className="text-blue-500 hover:underline">Ask now</a>
-</p>
-
-</div>
-</div>
-
+        <button className="w-40 py-3 px-6 bg-black text-white rounded-3xl hover:bg-gray-800 transition-all font-bold">
+          Shop Now
+        </button>
+        <p className="text-gray-600 mt-2 text-xl">
+          Got a Question?{" "}
+          <a
+            href="https://goodveda.com/pages/contact"
+            className="text-blue-500 hover:underline"
+          >
+            Ask now
+          </a>
+        </p>
+      </div>
+    </div>
   );
 };
 
