@@ -75,7 +75,7 @@ const FAQ = () => {
         question:'Do you offer any personalized health consultations?',
 
 
-answer:'Yes, all of our products come with 1 month of free health consultations. You can renew the consultation if needed...',
+answer:'Yes, all of the products come with 1 month of free health consultations. You can renew the consultation if needed...',
       },
     ],
   };
